@@ -1,3 +1,10 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [bo.cs](./CS/bo.cs) (VB: [bo.vb](./VB/bo.vb))
+* [Form1.cs](./CS/Form1.cs) (VB: [Form1.vb](./VB/Form1.vb))
+* [ReportBuilderHelper.cs](./CS/ReportBuilderHelper.cs) (VB: [ReportBuilderHelper.vb](./VB/ReportBuilderHelper.vb))
+<!-- default file list end -->
 # How to dynamically generate a report and bind it to a collection of objects
 
 
