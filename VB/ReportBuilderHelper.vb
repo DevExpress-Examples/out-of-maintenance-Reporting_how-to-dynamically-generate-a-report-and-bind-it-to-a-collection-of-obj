@@ -27,9 +27,8 @@ Namespace K18078
 			For i As Integer = 0 To dsd.Count - 1
 				totalf += dsd(i).Factor
 			Next i
-'INSTANT VB WARNING: Instant VB cannot determine whether both operands of this division are integer types - if they are then you should use the VB integer division operator:
-			Dim fWidth As Integer = (rep.PageWidth - (rep.Margins.Left + rep.Margins.Right)) / totalf
-			Dim incShift As Integer = 0
+			Dim fWidth As Single = (rep.PageWidth - (rep.Margins.Left + rep.Margins.Right)) / totalf
+			Dim incShift As Single = 0
 			For i As Integer = 0 To colCount - 1
 				Dim labelh As XRLabel = CreateLabel(dsd(i), fWidth, incShift)
 				labelh.Text = dsd(i).CaptionName
@@ -87,37 +86,36 @@ Namespace K18078
 		End Sub
 	End Class
 	Public Class DataSourceDefinition
-'INSTANT VB NOTE: The field fieldname was renamed since Visual Basic does not allow fields to have the same name as other class members:
-		Private fieldname_Renamed As String
+		Private _fieldname As String
 
 		Public Property Fieldname() As String
 			Get
-				Return fieldname_Renamed
+				Return _fieldname
 			End Get
 			Set(ByVal value As String)
-				fieldname_Renamed = value
+				_fieldname = value
 			End Set
 		End Property
-'INSTANT VB NOTE: The field captionName was renamed since Visual Basic does not allow fields to have the same name as other class members:
-		Private captionName_Renamed As String
+
+		Private _captionName As String
 
 		Public Property CaptionName() As String
 			Get
-				Return captionName_Renamed
+				Return _captionName
 			End Get
 			Set(ByVal value As String)
-				captionName_Renamed = value
+				_captionName = value
 			End Set
 		End Property
-'INSTANT VB NOTE: The field factor was renamed since Visual Basic does not allow fields to have the same name as other class members:
-		Private factor_Renamed As Integer
+
+		Private _factor As Integer
 
 		Public Property Factor() As Integer
 			Get
-				Return factor_Renamed
+				Return _factor
 			End Get
 			Set(ByVal value As Integer)
-				factor_Renamed = value
+				_factor = value
 			End Set
 		End Property
 

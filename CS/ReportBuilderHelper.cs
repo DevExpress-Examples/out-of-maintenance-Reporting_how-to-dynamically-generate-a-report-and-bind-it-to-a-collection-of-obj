@@ -28,8 +28,8 @@ namespace K18078
             int totalf = 0;
             for (int i = 0; i < dsd.Count; i++)
                 totalf += dsd[i].Factor;
-            int fWidth = (rep.PageWidth - (rep.Margins.Left + rep.Margins.Right)) / totalf;
-            int incShift = 0;
+            float fWidth = (rep.PageWidth - (rep.Margins.Left + rep.Margins.Right)) / totalf;
+            float incShift = 0;
             for (int i = 0; i < colCount; i++) {
                 XRLabel labelh = CreateLabel(dsd[i], fWidth, incShift);
                 labelh.Text = dsd[i].CaptionName;
@@ -95,23 +95,23 @@ namespace K18078
     }
     public class DataSourceDefinition
     {
-        string fieldname;
+        string _fieldname;
 
         public string Fieldname {
-            get { return fieldname; }
-            set { fieldname = value; }
+            get { return _fieldname; }
+            set { _fieldname = value; }
         }
-        string captionName;
+        string _captionName;
 
         public string CaptionName {
-            get { return captionName; }
-            set { captionName = value; }
+            get { return _captionName; }
+            set { _captionName = value; }
         }
-        int factor;
+        int _factor;
 
         public int Factor {
-            get { return factor; }
-            set { factor = value; }
+            get { return _factor; }
+            set { _factor = value; }
         }
 
     }
